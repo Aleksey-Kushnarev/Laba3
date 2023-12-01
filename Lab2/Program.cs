@@ -10,8 +10,7 @@ namespace Lab2
             double y;
             for (double x = 0.1; x <= 1; x += 0.09)
             {
-                double cos = Math.Cos(x);
-                y = 2 * (cos * cos - 1);
+                y = ResultFunction(x);
                 double sn = SumRecurrentWithN(40, x);
                 double se = SumRecurrentWithAccuracy(0.0001, x);
                 Console.WriteLine($"x = {x:f10}\ty = {y:f10}\tsn = {sn:f10}\tse = {se:f10}");
